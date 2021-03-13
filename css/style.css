@@ -34,7 +34,7 @@ p{
 
 .blue {
     padding: 2rem 0;
-    background-image: url(img/CityCycle.jpg);
+    background-image: url(../img/CityCycle.jpg);
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: 45% 70%;
