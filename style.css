@@ -1,0 +1,93 @@
+* {
+    font-family: "bitter", sans-serif;
+    padding:0;
+    margin:0;
+    line-height: 1rem; 
+}
+
+/* TITRE */
+h1 {
+    color: lightgreen;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+    padding: 1.5rem 0;
+    line-height: 2rem; 
+}
+
+h2,
+h3,
+h4 {
+    color: #061DB7;
+    line-height: 2rem;
+}
+
+p{
+    line-height: 2rem;
+}
+
+/* class */
+
+.global {
+    display: flex;
+}
+
+.blue {
+    padding: 2rem 0;
+    background-image: url(img/CityCycle.jpg);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 45% 70%;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+
+.list {
+    color: lightgreen;
+    background-color: #061DB7;
+    padding: 3rem; 
+}
+
+/* balise */ 
+
+img {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+li {
+    padding: 0.5rem;
+    line-height: 1rem;
+    list-style-type: none;
+}
+
+li:before {
+  content: "\f206"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em; 
+}
+
+
+/* id */
+
+#details {
+    padding: 1rem;
+    line-height: 1rem;
+}
+
+
+#mapid {
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    vertical-align: middle;
+}
