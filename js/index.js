@@ -5,14 +5,19 @@ $(document).ready(function() {
 	let address;
 	let map;
 	let zoom = 13;
-	const CITY = "brisbane";
-	const API_KEY = "94f8752214d0ceb23f8e8715394482a53dce4b13";
+	// const CITY = "brisbane";
+	const CITY = "dublin";
+	const API_KEY = "c565bedfbf44913720d6d4b44aa05254b575cb12";
+
 	/// html id pour ajouter la liste
 	let urlList =
-		"https://api.jcdecaux.com/vls/v1/stations?contract=" +
+		"https://api.jcdecaux.com/vls/v3/stations?contract=" +
 		CITY +
 		"&apiKey=" +
 		API_KEY;
+
+		console.log(urlList)
+
 
 	//! FONCTIONS
 
@@ -38,7 +43,7 @@ $(document).ready(function() {
 
 		// récupère l'url avec le numéro de la station sur laquelle on clique
 		let url =
-			"https://api.jcdecaux.com/vls/v3/stations/" + stationNumber + "?contract=" + CITY +"&apiKey=94f8752214d0ceb23f8e8715394482a53dce4b13";
+			"https://api.jcdecaux.com/vls/v3/stations/" + stationNumber + "?contract=" + CITY +"&apiKey=" + API_KEY;
 		console.log(url);
 
 		// appel la fonction pour mettre dans la div id= details les informations de la stations
@@ -66,8 +71,6 @@ $(document).ready(function() {
 			<h3>GPS :</h3>
 				<p> ${station.position.latitude}, ${station.position.longitude}</p>
         `);
-
-		
 
 		
 
