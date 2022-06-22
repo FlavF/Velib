@@ -1,11 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	///! VARIABLES
 	let marker;
 	let name;
 	let address;
 	let map;
 	let zoom = 13;
-	// const CITY = "brisbane";
+
 	const CITY = "dublin";
 	const API_KEY = "c565bedfbf44913720d6d4b44aa05254b575cb12";
 
@@ -16,8 +16,7 @@ $(document).ready(function() {
 		"&apiKey=" +
 		API_KEY;
 
-		console.log(urlList)
-
+	console.log(urlList);
 
 	//! FONCTIONS
 
@@ -26,7 +25,7 @@ $(document).ready(function() {
 		let station = data;
 		console.log(station);
 
-		// list des noms de stations 
+		// list des noms de stations
 		for (let i = 0; i < station.length; i++) {
 			let name = station[i].name;
 			let number = station[i].number;
@@ -43,7 +42,12 @@ $(document).ready(function() {
 
 		// récupère l'url avec le numéro de la station sur laquelle on clique
 		let url =
-			"https://api.jcdecaux.com/vls/v3/stations/" + stationNumber + "?contract=" + CITY +"&apiKey=" + API_KEY;
+			"https://api.jcdecaux.com/vls/v3/stations/" +
+			stationNumber +
+			"?contract=" +
+			CITY +
+			"&apiKey=" +
+			API_KEY;
 		console.log(url);
 
 		// appel la fonction pour mettre dans la div id= details les informations de la stations
@@ -52,8 +56,8 @@ $(document).ready(function() {
 
 	// ajouter les informations de la station
 	function showDetail(station) {
-		// met dans la div  id= details 
-						// possibilité de mettre directement dans le html dans des p au lieu de la div details (id à créer sur html)/
+		// met dans la div  id= details
+		// possibilité de mettre directement dans le html dans des p au lieu de la div details (id à créer sur html)/
 		$("#details").html(`
         <h2>Station Name is : </h2>
             <p> ${station.name}</p>
@@ -71,8 +75,6 @@ $(document).ready(function() {
 			<h3>GPS :</h3>
 				<p> ${station.position.latitude}, ${station.position.longitude}</p>
         `);
-
-		
 
 		// création de la map ou deplacement de la carte
 		if (map == null) {
